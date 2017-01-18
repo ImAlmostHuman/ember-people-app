@@ -1,10 +1,18 @@
 <h1>Create User</h1>
 
-{{input type}}
 
-{{drop-down content=programmers value=someBindingValue selectClass="some classname" optionValuePath="value" optionLabelPath="display"}}
+<div>
+{{#x-select value='mr' action="selectTitle" as |xs|}}
+  {{#xs.option value=mr}}Mr{{/xs.option}}
+  {{#xs.option value=mrs}}Mrs{{/xs.option}}
+  {{#xs.option value=dr}}Dr{{/xs.option}}
+  {{#xs.option value=cpt}}Cpt{{/xs.option}}
+{{/x-select}}
+</div>
 
+<div>
+{{input type="text" class="new-todo" placeholder="Enter Name Here!" value=newTitle action="createTodo"}}
+</div>
 
-{{input type="text" class="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"}}
 
 {{outlet}}
