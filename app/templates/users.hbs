@@ -1,0 +1,13 @@
+<h1>A List of all of the users</h1>
+{{#each model as |user|}}
+	<article class = 'User'>
+		<h3>Title: {{user.title}}</h3>
+		<h3>Name: {{user.name}}</h3>
+		<h3>Gender: {{user.gender}}</h3>
+		{{#if user.active}}
+			<h3>Active: Yes</h3>
+		{{else}}
+			<h3>Active: No</h3>
+		{{/if}}
+	</article>
+{{/each}}

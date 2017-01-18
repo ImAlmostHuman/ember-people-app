@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="fluid-container">
+        <div class="navbar-header">
+            <img src="http://images.clipartbro.com/167/realistic-fire-flames-clipart-panda-free-images-167945.png" alt="fire" style="height:65px;margin-left:10px;margin-top:5px;">
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li>{{#link-to 'index'}}
+                    <h1>
+                    Users
+                    </h1>
+                {{/link-to}}</li>
+                <li>{{#link-to 'user.new'}}
+                    <h1>
+                    Create
+                    </h1>
+                {{/link-to}}</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="body" style="margin-top: 150px">
+    {{outlet}}
+</div>
