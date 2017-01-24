@@ -120,6 +120,10 @@ module.exports = function(app, options){
       ).contentType("application/vnd.api+json; charset=utf-8").send(response).end();
     }
   });
+
+  router.post('/users', function(req, res) {
+    res.status(200);
+  });
  
   app.use(api+type, require('body-parser').json({ type: 'application/vnd.api+json' }), router);
  

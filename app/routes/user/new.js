@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   actions: {
 
     saveUser(newUser) {
-      newUser.save().then(() => this.transitionTo('Users'));
+      newUser.save().then(() => this.transitionTo('users'));
     },
 
     willTransition() {
