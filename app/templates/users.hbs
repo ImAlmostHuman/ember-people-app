@@ -1,13 +1,24 @@
 <h1>A List of all of the users</h1>
-{{#each model as |user|}}
-	<article class = 'User'>
-		<h3>Title: {{user.title}}</h3>
-		<h3>Name: {{user.name}}</h3>
-		<h3>Gender: {{user.gender}}</h3>
-		{{#if user.active}}
-			<h3>Active: Yes</h3>
+<div class="row">
+  {{#each model as |user|}}
+    <div class="col-md-4">
+      <div class="panel panel-default user-item">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{user.title}} {{user.name}}</h3>
+        </div>
+        <div class="panel-body">
+          <p>Gender: {{user.gender}}</p>
+          {{#if user.active}}
+			<p>Active: Yes</p>
 		{{else}}
-			<h3>Active: No</h3>
+			<p>Active: No</p>
 		{{/if}}
-	</article>
-{{/each}}
+        </div>
+        <div class="panel-footer text-right">
+          {{#link-to 'users.edit' library.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+          <button class="btn btn-danger btn-xs" {{action 'deleteUser' library}}>Delete</button>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
