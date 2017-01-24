@@ -11,7 +11,7 @@ Router.map(function() {
 
   this.route('user', function() {
     this.route('new');
-    this.route('edit');
+    this.route('edit', {path: '/:user_id/edit'});
   });
 });
 
